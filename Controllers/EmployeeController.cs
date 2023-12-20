@@ -163,7 +163,7 @@ namespace Task2.Controllers
             }
             return View(employeeViewModel);
         }
-        [HttpPost]
+        [HttpPost, ActionName("DeleteEmployee")]
         public IActionResult DeleteEmp(int? id)
         {
             var deleterecord = _context.Employees.Find(id);
