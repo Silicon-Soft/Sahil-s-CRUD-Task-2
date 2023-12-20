@@ -96,6 +96,7 @@ namespace Task2.Controllers
         {
             Employee employee = new Employee()
             {
+                Id = employeeViewModel.Id,
                 Name = employeeViewModel.Name,
                 Gender = employeeViewModel.Gender,
                 Address = employeeViewModel.Address,
@@ -108,7 +109,7 @@ namespace Task2.Controllers
                 _context.Employees.Update(employee);
                 _context.SaveChanges();
                 TempData["ResultOk"] = "Data Updated Successfully !";
-                return RedirectToAction("GetAllEmployees","Employee");
+                return RedirectToAction("GetAllEmployees");
             }
 
             return View(employeeViewModel);
@@ -122,6 +123,7 @@ namespace Task2.Controllers
             var empfromdb = _context.Employees.Find(id);
             EmployeeViewModel employeeViewModel = new EmployeeViewModel()
             {
+                Id = empfromdb.Id,
                 Name = empfromdb.Name,
                 Gender = empfromdb.Gender,
                 Address = empfromdb.Address,
@@ -147,7 +149,7 @@ namespace Task2.Controllers
             _context.Employees.Remove(deleterecord);
             _context.SaveChanges();
             TempData["ResultOk"] = "Data Deleted Successfully !";
-            return RedirectToAction("GetAllEmployees","Employee");
+            return RedirectToAction("GetAllEmployees");
         }
     }
 }
