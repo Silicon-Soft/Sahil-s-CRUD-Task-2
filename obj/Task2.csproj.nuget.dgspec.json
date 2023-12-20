@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Internship\\Task - 2\\Task2\\Task2.csproj": {}
+    "D:\\Internship\\Git\\Sahil-s-CRUD-Task-2\\Task2.csproj": {}
   },
   "projects": {
-    "D:\\Internship\\Task - 2\\Task2\\Task2.csproj": {
+    "D:\\Internship\\Git\\Sahil-s-CRUD-Task-2\\Task2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Internship\\Task - 2\\Task2\\Task2.csproj",
+        "projectUniqueName": "D:\\Internship\\Git\\Sahil-s-CRUD-Task-2\\Task2.csproj",
         "projectName": "Task2",
-        "projectPath": "D:\\Internship\\Task - 2\\Task2\\Task2.csproj",
+        "projectPath": "D:\\Internship\\Git\\Sahil-s-CRUD-Task-2\\Task2.csproj",
         "packagesPath": "C:\\Users\\termi\\.nuget\\packages\\",
-        "outputPath": "D:\\Internship\\Task - 2\\Task2\\obj\\",
+        "outputPath": "D:\\Internship\\Git\\Sahil-s-CRUD-Task-2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\termi\\AppData\\Roaming\\NuGet\\NuGet.Config",

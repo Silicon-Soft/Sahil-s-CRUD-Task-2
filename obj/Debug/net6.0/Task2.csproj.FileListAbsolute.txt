@@ -1,68 +1,69 @@
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\appsettings.Development.json
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\appsettings.json
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.staticwebassets.runtime.json
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.exe
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.deps.json
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.runtimeconfig.json
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Task2.pdb
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.GeneratedMSBuildEditorConfig.editorconfig
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.AssemblyInfoInputs.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.AssemblyInfo.cs
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.csproj.CoreCompileInputs.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.MvcApplicationPartsAssemblyInfo.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.RazorAssemblyInfo.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.RazorAssemblyInfo.cs
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets.build.json
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets.development.json
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets\msbuild.Task2.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets\msbuild.build.Task2.props
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Task2.props
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Task2.props
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\staticwebassets.pack.json
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\scopedcss\bundle\Task2.styles.css
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\scopedcss\projectbundle\Task2.bundle.scp.css
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.dll
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\refint\Task2.dll
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.pdb
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.genruntimeconfig.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\ref\Task2.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Drawing.Common.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Runtime.Caching.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\System.Windows.Extensions.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.csproj.AssemblyReference.cache
-D:\Internship\Task - 2\Task2\obj\Debug\net6.0\Task2.csproj.CopyComplete
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Humanizer.dll
-D:\Internship\Task - 2\Task2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.csproj.AssemblyReference.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.AssemblyInfoInputs.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.AssemblyInfo.cs
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.csproj.CoreCompileInputs.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.MvcApplicationPartsAssemblyInfo.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.RazorAssemblyInfo.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.RazorAssemblyInfo.cs
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.sourcelink.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\appsettings.Development.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\appsettings.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.staticwebassets.runtime.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.exe
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.deps.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.runtimeconfig.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Task2.pdb
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Humanizer.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets.build.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets.development.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets\msbuild.Task2.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets\msbuild.build.Task2.props
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Task2.props
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Task2.props
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\scopedcss\bundle\Task2.styles.css
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\scopedcss\projectbundle\Task2.bundle.scp.css
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.csproj.CopyComplete
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\refint\Task2.dll
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.pdb
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\Task2.genruntimeconfig.cache
+D:\Internship\Git\Sahil-s-CRUD-Task-2\obj\Debug\net6.0\ref\Task2.dll

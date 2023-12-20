@@ -9,55 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Task2
 build_property.RootNamespace = Task2
-build_property.ProjectDir = D:\Internship\Task - 2\Task2\
+build_property.ProjectDir = D:\Internship\Git\Sahil-s-CRUD-Task-2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Internship\Task - 2\Task2
+build_property.MSBuildProjectDirectory = D:\Internship\Git\Sahil-s-CRUD-Task-2
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Internship/Task - 2/Task2/Views/Employee/CreateEmployee.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Employee/CreateEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlRW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Employee/DeleteEmployee.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Employee/DeleteEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlRW1wbG95ZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Employee/EditEmployee.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Employee/EditEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdEVtcGxveWVlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Employee/GetAllEmployees.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Employee/GetAllEmployees.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcR2V0QWxsRW1wbG95ZWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Home/Index.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Home/Privacy.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Shared/Error.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/_ViewImports.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/_ViewStart.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Internship/Task - 2/Task2/Views/Shared/_Layout.cshtml]
+[D:/Internship/Git/Sahil-s-CRUD-Task-2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5mighp175d

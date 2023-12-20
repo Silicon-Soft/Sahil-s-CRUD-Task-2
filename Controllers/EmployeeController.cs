@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
+using System.Numerics;
+using System.Reflection;
+using System.Xml.Linq;
 using Task2.Models;
+using Task2.ViewModel;
 
 namespace Task2.Controllers
 {
@@ -13,10 +18,26 @@ namespace Task2.Controllers
             _context = context;
         }
 
-        public IActionResult GetAllEmployees()
+        public IActionResult GetAllEmployees(EmployeeViewModel employeeViewModel)
         {
-            IEnumerable<Employee> emplist = _context.Employees;
-            return View(emplist);
+            List<Employee> emplist = _context.Employees.ToList();
+            List<EmployeeViewModel> employeeViewModels = new List<EmployeeViewModel>();
+            foreach (var employee in emplist)
+            {
+                employeeViewModels.Add(new EmployeeViewModel()
+                    {
+                        Id = employee.Id,
+                        Name = employee.Name,
+                        Gender =employee.Gender,
+                        Address = employee.Address,
+                        Phone = employee.Phone,
+                        Email = employee.Email,
+                        Salary = employee.Salary
+                    }
+                );
+
+            }
+            return View(employeeViewModels);
         }
 
         public IActionResult CreateEmployee()
@@ -24,17 +45,27 @@ namespace Task2.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CreateEmployee(Employee empobj)
+        public IActionResult CreateEmployee(EmployeeViewModel employeeViewModel)
         {
+            Employee employee = new Employee()
+            {
+                Name = employeeViewModel.Name,
+                Gender = employeeViewModel.Gender,
+                Address = employeeViewModel.Address,
+                Phone = employeeViewModel.Phone,
+                Email = employeeViewModel.Email,
+                Salary = employeeViewModel.Salary
+            };
+
             if (ModelState.IsValid)
             {
-                _context.Employees.Add(empobj);
+                _context.Employees.Add(employee);
                 _context.SaveChanges();
                 TempData["ResultOk"] = "Record Added Successfully !";
                 return RedirectToAction("GetAllEmployees");
             }
 
-            return View(empobj);
+            return View(employeeViewModel);
         }
         public IActionResult EditEmployee(int id)
         {
@@ -42,26 +73,45 @@ namespace Task2.Controllers
             {
                 return NotFound();
             }
-            var empfromdb = _context.Employees.Find(id);
+            var empfromdb = _context.Employees.Find(id)!;
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+            {
+                Id = empfromdb.Id,
+                Name = empfromdb.Name,
+                Gender = empfromdb.Gender,
+                Address = empfromdb.Address,
+                Phone = empfromdb.Phone,
+                Email = empfromdb.Email,
+                Salary = empfromdb.Salary
+            };
 
             if (empfromdb == null)
             {
                 return NotFound();
             }
-            return View(empfromdb);
+            return View(employeeViewModel);
         }
         [HttpPost]
-        public IActionResult EditEmployee(Employee empobj)
+        public IActionResult EditEmployee(EmployeeViewModel employeeViewModel)
         {
+            Employee employee = new Employee()
+            {
+                Name = employeeViewModel.Name,
+                Gender = employeeViewModel.Gender,
+                Address = employeeViewModel.Address,
+                Phone = employeeViewModel.Phone,
+                Email = employeeViewModel.Email,
+                Salary = employeeViewModel.Salary
+            };
             if (ModelState.IsValid)
             {
-                _context.Employees.Update(empobj);
+                _context.Employees.Update(employee);
                 _context.SaveChanges();
                 TempData["ResultOk"] = "Data Updated Successfully !";
-                return RedirectToAction("GetAllEmployees");
+                return RedirectToAction("GetAllEmployees","Employee");
             }
 
-            return View(empobj);
+            return View(employeeViewModel);
         }
         public IActionResult DeleteEmployee(int? id)
         {
@@ -70,12 +120,21 @@ namespace Task2.Controllers
                 return NotFound();
             }
             var empfromdb = _context.Employees.Find(id);
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+            {
+                Name = empfromdb.Name,
+                Gender = empfromdb.Gender,
+                Address = empfromdb.Address,
+                Phone = empfromdb.Phone,
+                Email = empfromdb.Email,
+                Salary = empfromdb.Salary
+            };
 
             if (empfromdb == null)
             {
                 return NotFound();
             }
-            return View(empfromdb);
+            return View(employeeViewModel);
         }
         [HttpPost]
         public IActionResult DeleteEmp(int? id)
@@ -88,7 +147,7 @@ namespace Task2.Controllers
             _context.Employees.Remove(deleterecord);
             _context.SaveChanges();
             TempData["ResultOk"] = "Data Deleted Successfully !";
-            return RedirectToAction("GetAllEmployees");
+            return RedirectToAction("GetAllEmployees","Employee");
         }
     }
 }
