@@ -67,7 +67,32 @@ namespace Task2.Controllers
 
             return View(employeeViewModel);
         }
-        public IActionResult EditEmployee(int id)
+
+        public IActionResult ReadEmployee(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var empfromdb = _context.Employees.Find(id)!;
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
+            {
+                Id = empfromdb.Id,
+                Name = empfromdb.Name,
+                Gender = empfromdb.Gender,
+                Address = empfromdb.Address,
+                Phone = empfromdb.Phone,
+                Email = empfromdb.Email,
+                Salary = empfromdb.Salary
+            };
+
+            if (empfromdb == null)
+            {
+                return NotFound();
+            }
+            return View(employeeViewModel);
+        }
+        public IActionResult EditEmployee(int? id)
         {
             if (id == null || id == 0)
             {
