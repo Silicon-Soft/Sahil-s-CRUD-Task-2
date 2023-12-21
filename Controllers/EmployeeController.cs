@@ -1,45 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Net;
-using System.Numerics;
-using System.Reflection;
-using System.Xml.Linq;
-using Task2.Models;
+using Task2.Services;
 using Task2.ViewModel;
+using Task2.Models;
 
-namespace Task2.Controllers
+namespace Practice_project.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly EmployeeDbContext _context;
+        private readonly IEmployeeService _employeeService;
 
-        public EmployeeController(EmployeeDbContext context)
+        public EmployeeController(IEmployeeService employeeService)
         {
-            _context = context;
+            _employeeService = employeeService;
         }
-
-        public IActionResult GetAllEmployees(EmployeeViewModel employeeViewModel)
+        public IActionResult Index()
         {
-            List<Employee> emplist = _context.Employees.ToList();
-            List<EmployeeViewModel> employeeViewModels = new List<EmployeeViewModel>();
-            foreach (var employee in emplist)
-            {
-                employeeViewModels.Add(new EmployeeViewModel()
-                    {
-                        Id = employee.Id,
-                        Name = employee.Name,
-                        Gender =employee.Gender,
-                        Address = employee.Address,
-                        Phone = employee.Phone,
-                        Email = employee.Email,
-                        Salary = employee.Salary
-                    }
-                );
-
-            }
-            return View(employeeViewModels);
+            return View("GetAllEmployees");
         }
+        public IActionResult GetAllEmployees()
+        {
+            return View(_employeeService.EmployeeViewModel());
 
+        }
         public IActionResult CreateEmployee()
         {
             return View();
@@ -47,134 +30,42 @@ namespace Task2.Controllers
         [HttpPost]
         public IActionResult CreateEmployee(EmployeeViewModel employeeViewModel)
         {
-            Employee employee = new Employee()
+            try
             {
-                Name = employeeViewModel.Name,
-                Gender = employeeViewModel.Gender,
-                Address = employeeViewModel.Address,
-                Phone = employeeViewModel.Phone,
-                Email = employeeViewModel.Email,
-                Salary = employeeViewModel.Salary
-            };
-
-            if (ModelState.IsValid)
+                _employeeService.CreateEmployee(employeeViewModel);
+                return RedirectToAction("GetAllEmployees", "Employee");
+            }
+            catch (DbUpdateException ex)
             {
-                _context.Employees.Add(employee);
-                _context.SaveChanges();
-                TempData["ResultOk"] = "Record Added Successfully !";
-                return RedirectToAction("GetAllEmployees");
+                Console.WriteLine(ex);
+                throw;
             }
 
-            return View(employeeViewModel);
         }
-
-        public IActionResult ReadEmployee(int? id)
+        public IActionResult EditEmployee(int id)
         {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var empfromdb = _context.Employees.Find(id)!;
-            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
-            {
-                Id = empfromdb.Id,
-                Name = empfromdb.Name,
-                Gender = empfromdb.Gender,
-                Address = empfromdb.Address,
-                Phone = empfromdb.Phone,
-                Email = empfromdb.Email,
-                Salary = empfromdb.Salary
-            };
-
-            if (empfromdb == null)
-            {
-                return NotFound();
-            }
-            return View(employeeViewModel);
+            return View(_employeeService.ReadEmployee(id));
         }
-        public IActionResult EditEmployee(int? id)
+        [HttpPost, ActionName("EditEmployee")]
+        public IActionResult Edit(EmployeeViewModel employeeViewData)
         {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var empfromdb = _context.Employees.Find(id)!;
-            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
-            {
-                Id = empfromdb.Id,
-                Name = empfromdb.Name,
-                Gender = empfromdb.Gender,
-                Address = empfromdb.Address,
-                Phone = empfromdb.Phone,
-                Email = empfromdb.Email,
-                Salary = empfromdb.Salary
-            };
-
-            if (empfromdb == null)
-            {
-                return NotFound();
-            }
-            return View(employeeViewModel);
+            _employeeService.EditEmployee(employeeViewData);
+            return RedirectToAction("GetAllEmployees", "Employee");
         }
-        [HttpPost]
-        public IActionResult EditEmployee(EmployeeViewModel employeeViewModel)
+        public IActionResult ReadEmployee(int id)
         {
-            Employee employee = new Employee()
-            {
-                Id = employeeViewModel.Id,
-                Name = employeeViewModel.Name,
-                Gender = employeeViewModel.Gender,
-                Address = employeeViewModel.Address,
-                Phone = employeeViewModel.Phone,
-                Email = employeeViewModel.Email,
-                Salary = employeeViewModel.Salary
-            };
-            if (ModelState.IsValid)
-            {
-                _context.Employees.Update(employee);
-                _context.SaveChanges();
-                TempData["ResultOk"] = "Data Updated Successfully !";
-                return RedirectToAction("GetAllEmployees");
-            }
-
-            return View(employeeViewModel);
+            return View(_employeeService.ReadEmployee(id));
         }
-        public IActionResult DeleteEmployee(int? id)
+        public IActionResult DeleteEmployee(int id)
         {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var empfromdb = _context.Employees.Find(id);
-            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
-            {
-                Id = empfromdb.Id,
-                Name = empfromdb.Name,
-                Gender = empfromdb.Gender,
-                Address = empfromdb.Address,
-                Phone = empfromdb.Phone,
-                Email = empfromdb.Email,
-                Salary = empfromdb.Salary
-            };
-
-            if (empfromdb == null)
-            {
-                return NotFound();
-            }
-            return View(employeeViewModel);
+            return View(_employeeService.ReadEmployee(id));
         }
+
         [HttpPost, ActionName("DeleteEmployee")]
-        public IActionResult DeleteEmp(int? id)
+        public IActionResult Delete(int id)
         {
-            var deleterecord = _context.Employees.Find(id);
-            if (deleterecord == null)
-            {
-                return NotFound();
-            }
-            _context.Employees.Remove(deleterecord);
-            _context.SaveChanges();
-            TempData["ResultOk"] = "Data Deleted Successfully !";
-            return RedirectToAction("GetAllEmployees");
+            _employeeService.DeleteEmployee(id);
+            return RedirectToAction("GetAllEmployees", "Employee");
         }
     }
 }
