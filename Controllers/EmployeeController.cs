@@ -20,7 +20,7 @@ namespace Practice_project.Controllers
         }
         public IActionResult GetAllEmployees()
         {
-            return View(_employeeService.EmployeeViewModel());
+            return View(_employeeService.GetAllEmployees());
 
         }
         public IActionResult CreateEmployee()
@@ -28,11 +28,11 @@ namespace Practice_project.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CreateEmployee(EmployeeViewModel employeeViewModel)
+        public IActionResult CreateEmployee(CreateViewModel CreateViewModel)
         {
             try
             {
-                _employeeService.CreateEmployee(employeeViewModel);
+                _employeeService.CreateEmployee(CreateViewModel);
                 return RedirectToAction("GetAllEmployees", "Employee");
             }
             catch (DbUpdateException ex)
@@ -42,14 +42,18 @@ namespace Practice_project.Controllers
             }
 
         }
-        public IActionResult EditEmployee(int id)
+        public async Task<IActionResult> EditEmployee(int id)
         {
-            return View(_employeeService.ReadEmployee(id));
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            return View(_employeeService.EditEmployee(id));
         }
         [HttpPost, ActionName("EditEmployee")]
-        public IActionResult Edit(EmployeeViewModel employeeViewData)
+        public IActionResult Edit(EditViewModel EditViewModel)
         {
-            _employeeService.EditEmployee(employeeViewData);
+            _employeeService.EditEmployee(EditViewModel);
             return RedirectToAction("GetAllEmployees", "Employee");
         }
         public IActionResult ReadEmployee(int id)

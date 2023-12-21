@@ -2,12 +2,13 @@
 using Task2.ViewModel;
 
 namespace Task2.Services;
-
 public interface IEmployeeService
 {
-    List<GetViewModel> GetViewModel();
+    List<GetViewModel> GetAllEmployees();
     ReadViewModel ReadEmployee(int id);
-    void CreateEmployee(CreateViewModel employeeViewData);
-    void EditEmployee(EditViewModel employeeViewData);
+    void CreateEmployee(CreateViewModel createViewModel);
+    void EditEmployee(EditViewModel editViewModel);
     void DeleteEmployee(int id);
+    EditViewModel EditEmployee(int id);
+
 }
