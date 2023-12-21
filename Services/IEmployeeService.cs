@@ -5,9 +5,9 @@ namespace Task2.Services;
 
 public interface IEmployeeService
 {
-    List<EmployeeViewModel> EmployeeViewModel();
-    EmployeeViewModel ReadEmployee(int id);
-    void CreateEmployee(EmployeeViewModel employeeViewData);
-    void EditEmployee(EmployeeViewModel employeeViewData);
+    List<GetViewModel> GetViewModel();
+    ReadViewModel ReadEmployee(int id);
+    void CreateEmployee(CreateViewModel employeeViewData);
+    void EditEmployee(EditViewModel employeeViewData);
     void DeleteEmployee(int id);
 }

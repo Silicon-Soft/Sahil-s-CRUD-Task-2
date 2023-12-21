@@ -12,14 +12,14 @@ public class EmployeeService : IEmployeeService
         _dbContext = dbContext;
     }
 
-    public List<EmployeeViewModel> EmployeeViewModel()
+    public List<GetViewModel> GetViewModel()
     {
         List<Employee> employees = _dbContext.Employees.AsNoTracking().ToList();
-        List<EmployeeViewModel> EmployeeViewModels = new List<EmployeeViewModel>();
+        List<GetViewModel> GetViewModel = new List<GetViewModel>();
 
         foreach (var employee in employees)
         {
-            EmployeeViewModels.Add(new EmployeeViewModel()
+            GetViewModel.Add(new GetViewModel()
             {
                 Id = employee.Id,
                 Name = employee.Name,
@@ -27,14 +27,13 @@ public class EmployeeService : IEmployeeService
                 Address = employee.Address,
                 Phone = employee.Phone,
                 Email = employee.Email,
-                Salary = employee.Salary
             });
         }
 
-        return EmployeeViewModels;
+        return GetViewModel;
     }
 
-    public EmployeeViewModel ReadEmployee(int id)
+    public ReadViewModel ReadEmployee(int id)
     {
         Employee employee = _dbContext.Employees.Find(id);
 
@@ -43,7 +42,7 @@ public class EmployeeService : IEmployeeService
             return null;
         }
 
-        EmployeeViewModel EmployeeViewModel = new EmployeeViewModel()
+        ReadViewModel ReadViewModel = new ReadViewModel()
         {
             Id = employee.Id,
             Name = employee.Name,
@@ -54,42 +53,43 @@ public class EmployeeService : IEmployeeService
             Salary = employee.Salary
         };
 
-        return EmployeeViewModel;
+        return ReadViewModel;
     }
 
-    public void CreateEmployee(EmployeeViewModel EmployeeViewModel)
+    public void CreateEmployee(CreateViewModel CreateViewModel)
     {
         Employee employee = new Employee()
         {
-            Id = EmployeeViewModel.Id,
-            Name = EmployeeViewModel.Name,
-            Gender = EmployeeViewModel.Gender,
-            Address = EmployeeViewModel.Address,
-            Phone = EmployeeViewModel.Phone,
-            Email = EmployeeViewModel.Email,
-            Salary = EmployeeViewModel.Salary
+            Name = CreateViewModel.Name,
+            Gender = CreateViewModel.Gender,
+            Address = CreateViewModel.Address,
+            Phone = CreateViewModel.Phone,
+            Email = CreateViewModel.Email,
+            Salary = CreateViewModel.Salary
         };
 
         _dbContext.Employees.Add(employee);
         _dbContext.SaveChanges();
     }
+
+ 
     public void DeleteEmployee(int id)
     {
         Employee employee = _dbContext.Employees.Find(id)!;
         _dbContext.Employees.Remove(employee);
         _dbContext.SaveChanges();
     }
-    public void EditEmployee(EmployeeViewModel EmployeeViewModel)
+    public void EditEmployee(EditViewModel EditViewModel)
     {
         Employee employee = new Employee()
         {
-            Id = EmployeeViewModel.Id,
-            Name = EmployeeViewModel.Name,
-            Gender = EmployeeViewModel.Gender,
-            Address = EmployeeViewModel.Address,
-            Phone = EmployeeViewModel.Phone,
-            Email = EmployeeViewModel.Email,
-            Salary = EmployeeViewModel.Salary
+            Id = EditViewModel.Id,
+            Name = EditViewModel.Name,
+            Gender = EditViewModel.Gender,
+            Address = EditViewModel.Address,
+            Phone = EditViewModel.Phone,
+            Email = EditViewModel.Email,
+            Salary = EditViewModel.Salary
         };
         _dbContext.Employees.Update(employee);
         _dbContext.SaveChanges();
