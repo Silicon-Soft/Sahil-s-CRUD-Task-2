@@ -4,7 +4,7 @@ using Task2.ViewModel;
 using Task2.Models;
 using Task2.Services.Interface;
 
-namespace Practice_project.Controllers
+namespace Task2.Controllers
 {
     public class EmployeeController : Controller
     {

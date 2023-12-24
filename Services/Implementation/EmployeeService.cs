@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Task2.Models;
+using Task2.Repository.Interface;
 using Task2.Services.Interface;
 using Task2.ViewModel;
 
@@ -9,131 +11,100 @@ namespace Task2.Services.Implementation
 
     public class EmployeeService : IEmployeeService
     {
-        private readonly EmployeeDbContext _dbContext;
+        private readonly IEmployeeRepository _employeeRepository;
+        private IMapper _mapper;
 
-        public EmployeeService(EmployeeDbContext dbContext)
+        public EmployeeService(IEmployeeRepository employeeRepository, IMapper mapper)
         {
-            _dbContext = dbContext;
+            _employeeRepository = employeeRepository;
+            _mapper = mapper;
         }
+
 
         public List<GetViewModel> GetAllEmployees()
         {
-            List<Employee> employees = _dbContext.Employees.ToList();
-            List<GetViewModel> getViewModels = new List<GetViewModel>();
-
-            foreach (var employee in employees)
+            try
             {
-                getViewModels.Add(new GetViewModel()
-                {
-                    Id = employee.Id,
-                    Name = employee.Name,
-                    Gender = employee.Gender,
-                    Address = employee.Address,
-                    Phone = employee.Phone,
-                    Email = employee.Email,
-                });
+                List<Employee> employees = _employeeRepository.GetAllEmployees();
+                List<GetViewModel> getViewModels = _mapper.Map<List<GetViewModel>>(employees);
+                return getViewModels;
             }
-
-            return getViewModels;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public ReadViewModel ReadEmployee(int id)
         {
-            Employee employee = _dbContext.Employees.Find(id)!;
-            if (employee == null)
+            try
             {
-                return null;
+                Employee employee = _employeeRepository.ReadEmployee(id);
+                ReadViewModel readViewModel = _mapper.Map<ReadViewModel>(employee);
+                return readViewModel;
             }
-
-            ReadViewModel readViewModel = new ReadViewModel()
+            catch (Exception e)
             {
-
-                Id = employee.Id,
-                Name = employee.Name,
-                Gender = employee.Gender,
-                Address = employee.Address,
-                Phone = employee.Phone,
-                Email = employee.Email,
-                Salary = employee.Salary
-
-            };
-
-            return readViewModel;
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
-        public GetViewModel GetAllEmployees(int id)
-        {
-            Employee employee = _dbContext.Employees.Find(id)!;
-
-            if (employee == null)
-            {
-                return null;
-            }
-
-            GetViewModel getViewModel = new GetViewModel()
-            {
-
-                Id = employee.Id,
-                Name = employee.Name,
-                Gender = employee.Gender,
-                Address = employee.Address,
-                Phone = employee.Phone,
-                Email = employee.Email,
-            };
-
-            return getViewModel;
-        }
 
         public void CreateEmployee(CreateViewModel createViewModel)
         {
-            Employee employee = new Employee()
+            Employee employee = _mapper.Map<Employee>(createViewModel);
+            try
             {
-                Name = createViewModel.Name,
-                Gender = createViewModel.Gender,
-                Address = createViewModel.Address,
-                Phone = createViewModel.Phone,
-                Email = createViewModel.Email,
-                Salary = createViewModel.Salary
-            };
-
-            _dbContext.Employees.Add(employee);
-            _dbContext.SaveChanges();
+                _employeeRepository.CreateEmployee(employee);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
+
+        public void EditEmployee(EditViewModel editViewModel)
+        {
+            Employee employee = _mapper.Map<Employee>(editViewModel);
+            try
+            {
+                _employeeRepository.EditEmployee(employee);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+
         public void DeleteEmployee(int id)
         {
-            Employee employee = _dbContext.Employees.Find(id)!;
-            _dbContext.Employees.Remove(employee);
-            _dbContext.SaveChanges();
+            try
+            {
+                _employeeRepository.DeleteEmployeeById(id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public EditViewModel EditEmployee(int id)
         {
-            Employee employee = _dbContext.Employees.Find(id);
-            EditViewModel editViewModel = new EditViewModel()
-            {
-                Id = employee.Id,
-                Name = employee.Name,
-                Gender = employee.Gender,
-                Address = employee.Address,
-                Phone = employee.Phone,
-                Email = employee.Email,
-                Salary = employee.Salary
-            };
-            return editViewModel;
-        }
-        public void EditEmployee(EditViewModel editViewModel)
-        {
-            Employee employee = new Employee()
-            {
-                Id = editViewModel.Id,
-                Name = editViewModel.Name,
-                Gender = editViewModel.Gender,
-                Address = editViewModel.Address,
-                Phone = editViewModel.Phone,
-                Email = editViewModel.Email,
-                Salary = editViewModel.Salary
-            };
-            _dbContext.Employees.Update(employee);
-            _dbContext.SaveChanges();
+                try
+                {
+                    Employee employee = _employeeRepository.ReadEmployee(id);
+                    EditViewModel editViewModel = _mapper.Map<EditViewModel>(employee);
+                    return editViewModel;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
         }
 
     }

@@ -9,6 +9,6 @@ namespace Task2.Repository.Interface
         Employee ReadEmployee(int id);
         void CreateEmployee(Employee employee);
         void EditEmployee(Employee employee);
-        void DeleteEmployee(int id);
+        void DeleteEmployeeById(int id);
     }
 }

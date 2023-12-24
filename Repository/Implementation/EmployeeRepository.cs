@@ -36,11 +36,13 @@ namespace Task2.Repository.Implementation
             _dbContext.SaveChanges();
         }
 
-        public void DeleteEmployee(int id)
+
+        public void DeleteEmployeeById(int id)
         {
             Employee employee = _dbContext.Employees.Find(id)!;
             _dbContext.Employees.Remove(employee);
             _dbContext.SaveChanges();
         }
+
     }
 }
