@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Task2.Services;
+using Task2.Services.Implementation;
+using Task2.Services.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

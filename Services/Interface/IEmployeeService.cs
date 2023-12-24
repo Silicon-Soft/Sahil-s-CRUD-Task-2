@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Task2.ViewModel;
 
-namespace Task2.Services;
+namespace Task2.Services.Interface;
 public interface IEmployeeService
 {
     List<GetViewModel> GetAllEmployees();

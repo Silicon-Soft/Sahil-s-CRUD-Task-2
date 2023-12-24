@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Task2.Services;
 using Task2.ViewModel;
 using Task2.Models;
+using Task2.Services.Interface;
 
 namespace Practice_project.Controllers
 {
@@ -18,7 +18,6 @@ namespace Practice_project.Controllers
         public IActionResult GetAllEmployees()
         {
             return View(_employeeService.GetAllEmployees());
-
         }
         public IActionResult CreateEmployee()
         {
@@ -39,7 +38,7 @@ namespace Practice_project.Controllers
             }
 
         }
-        public async Task<IActionResult> EditEmployee(int id)
+        public IActionResult EditEmployee(int id)
         {
             if (id == null || id == 0)
             {

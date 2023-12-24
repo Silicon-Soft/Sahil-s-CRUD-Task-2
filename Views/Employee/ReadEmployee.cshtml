@@ -12,6 +12,11 @@
 
         <div class="form-row">
             <div class="form-group col-md-6">
+                <label asp-for="Id">Id</label>
+                <input type="text" class="form-control mb-3" asp-for="Id" disabled>
+                <span asp-validation-for="Id" class=" alert-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
                 <label asp-for="Name">Name</label>
                 <input type="text" class="form-control mb-3" asp-for="Name" disabled>
                 <span asp-validation-for="Name" class=" alert-danger"></span>

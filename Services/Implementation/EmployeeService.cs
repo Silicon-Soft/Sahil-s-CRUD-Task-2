@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Task2.Models;
-using Task2.Services;
+using Task2.Services.Interface;
 using Task2.ViewModel;
 
 
-namespace Task2.Services
+namespace Task2.Services.Implementation
 {
 
     public class EmployeeService : IEmployeeService
