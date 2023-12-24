@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Task2.Repository.Implementation;
+using Task2.Repository.Interface;
 using Task2.Services.Implementation;
 using Task2.Services.Interface;
 
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<EmployeeDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
