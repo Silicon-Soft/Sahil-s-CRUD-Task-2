@@ -14,10 +14,7 @@ namespace Practice_project.Controllers
         {
             _employeeService = employeeService;
         }
-        public IActionResult Index()
-        {
-            return View("GetAllEmployees");
-        }
+
         public IActionResult GetAllEmployees()
         {
             return View(_employeeService.GetAllEmployees());
