@@ -11,10 +11,10 @@ namespace Task2.Services.Implementation
 
     public class EmployeeService : IEmployeeService
     {
-        private readonly IEmployeeRepository _employeeRepository;
-        private IMapper _mapper;
+        private readonly IGenericRepository<Employee> _employeeRepository;
+        private readonly IMapper _mapper;
 
-        public EmployeeService(IEmployeeRepository employeeRepository, IMapper mapper)
+        public EmployeeService(IGenericRepository<Employee> employeeRepository, IMapper mapper)
         {
             _employeeRepository = employeeRepository;
             _mapper = mapper;
@@ -25,7 +25,7 @@ namespace Task2.Services.Implementation
         {
             try
             {
-                List<Employee> employees = _employeeRepository.GetAllEmployees();
+                List<Employee> employees = _employeeRepository.GetAll();
                 List<GetViewModel> getViewModels = _mapper.Map<List<GetViewModel>>(employees);
                 return getViewModels;
             }
@@ -40,7 +40,7 @@ namespace Task2.Services.Implementation
         {
             try
             {
-                Employee employee = _employeeRepository.ReadEmployee(id);
+                Employee employee = _employeeRepository.Read(id);
                 ReadViewModel readViewModel = _mapper.Map<ReadViewModel>(employee);
                 return readViewModel;
             }
@@ -57,7 +57,7 @@ namespace Task2.Services.Implementation
             Employee employee = _mapper.Map<Employee>(createViewModel);
             try
             {
-                _employeeRepository.CreateEmployee(employee);
+                _employeeRepository.Create(employee);
             }
             catch (Exception e)
             {
@@ -71,7 +71,7 @@ namespace Task2.Services.Implementation
             Employee employee = _mapper.Map<Employee>(editViewModel);
             try
             {
-                _employeeRepository.EditEmployee(employee);
+                _employeeRepository.Edit(employee);
             }
             catch (Exception e)
             {
@@ -85,7 +85,7 @@ namespace Task2.Services.Implementation
         {
             try
             {
-                _employeeRepository.DeleteEmployeeById(id);
+                _employeeRepository.Delete(id);
             }
             catch (Exception)
             {
@@ -96,7 +96,7 @@ namespace Task2.Services.Implementation
         {
                 try
                 {
-                    Employee employee = _employeeRepository.ReadEmployee(id);
+                    Employee employee = _employeeRepository.Read(id);
                     EditViewModel editViewModel = _mapper.Map<EditViewModel>(employee);
                     return editViewModel;
                 }
